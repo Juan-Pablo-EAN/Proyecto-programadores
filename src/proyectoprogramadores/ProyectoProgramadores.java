@@ -1,21 +1,14 @@
-package proyectoprogramadores;
-
-import java.util.Scanner;
 import java.text.DecimalFormat;
-
 public class ProyectoProgramadores {
-
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         DecimalFormat dec = new DecimalFormat("#.0");
-
         int base = 3000000;
         int eleccion = 0;
         int precio = 0;
         int tiempo = 0;
         String moneda = "";
         String tipo = "";
-
         System.out.println("Bienvenido programador");
         System.out.println("¿Qué tipo de aplicación vas a desarrollar?");
         System.out.println("1. App de escritorio");
@@ -24,6 +17,36 @@ public class ProyectoProgramadores {
         System.out.println("4. multiplataforma");
         eleccion = entrada.nextInt();
         if (eleccion == 1) {
+            System.out.println("Escoger el tipo de sistema de operativo : ");
+
+            System.out.println("1. Windows");
+            System.out.println("2. Mac");
+            System.out.println("3. Linux");
+            System.out.println("4. Desarrollo multisistema");
+
+            eleccion = entrada.nextInt();
+            switch (eleccion) {
+                case 1:
+                    precio = base + 1000000;
+                    tiempo = 4;
+                    tipo = "aplicación para Windows";
+                    break;
+                case 2:
+                    precio = base + 1000000;
+                    tiempo = 4;
+                    tipo = "aplicación para Mac";
+                    break;
+                case 3:
+                    precio = base + 1500000;
+                    tiempo = 4;
+                    tipo = "aplicación para Linux";
+                    break;
+                case 4:
+                    precio = base + 3000000;
+                    tiempo = 4;
+                    tipo = "aplicación multisistema";
+                    break;
+            }
 
         } else if (eleccion == 3) { //inicio de la condicion de paginas web
             precio = base + 1000000 + 250000 + 42000;
@@ -52,8 +75,6 @@ public class ProyectoProgramadores {
         } else {
             System.out.println("Ingresaste un valor incorrecto");
         }
-
         System.out.println("El costo de una " + tipo + " es de $" + precio + " " + moneda + " y tardaría " + tiempo + " meses.");
     }
-
 }
