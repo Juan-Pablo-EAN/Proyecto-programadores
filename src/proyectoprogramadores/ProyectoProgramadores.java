@@ -117,6 +117,6 @@ public class ProyectoProgramadores {
         } else {
             System.out.println("Ingresaste un valor incorrecto");
         }
-        System.out.println("El costo de una " + tipo + " es de $" + precio + " " + moneda + " y tardaría " + tiempo + " meses.");
+        System.out.println("El costo de una " + tipo + " es de $" + dec.format(precio) + " " + moneda + " y tardaría " + tiempo + " meses.");
     }
 }
