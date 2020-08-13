@@ -15,14 +15,14 @@ public class ProyectoProgramadores {
         String moneda = "";
         String tipo = "";
         System.out.println("Bienvenido programador");
-        System.out.println("¿Qué tipo de aplicación vas a desarrollar?");
+        System.out.println("¿Qué tipo de aplicación vas a desarrollar? Ingresa el número correspondiente");
         System.out.println("1. App de escritorio");
         System.out.println("2. App movil");
         System.out.println("3. Desarrollo web");
-        System.out.println("4. multiplataforma");
+        System.out.println("4. Multiplataforma");
         eleccion = entrada.nextInt();
         if (eleccion == 1) {
-            System.out.println("Escoger el tipo de sistema de operativo : ");
+            System.out.println("Escoge el tipo de sistema de operativo:");
 
             System.out.println("1. Windows");
             System.out.println("2. Mac");
@@ -51,6 +51,8 @@ public class ProyectoProgramadores {
                     tiempo = 4;
                     tipo = "aplicación multisistema";
                     break;
+                default:
+                    System.out.println("La opción que escogiste es incorrecta, por favor vuelve a intentar");
             }
 
         } else if (eleccion == 2) {
@@ -83,6 +85,8 @@ public class ProyectoProgramadores {
                     tiempo = 4;
                     tipo = "aplicación multisistema movil";
                     break;
+                default:
+                    System.out.println("La opción que escogiste es incorrecta, por favor vuelve a intentar");
             }
         } else if (eleccion == 3) { //inicio de la condicion de paginas web
             precio = base + 1000000 + 250000 + 42000;
@@ -93,6 +97,8 @@ public class ProyectoProgramadores {
             precio = base + 5000000;
             tiempo = 6;
             tipo = "aplicación multiplataforma";
+        } else {
+            System.out.println("La opción que escogiste es incorrecta, por favor vuelve a intentar");
         }
         System.out.println("¿Deseas el precio en pesos colombianos, dolares o euros?");
         System.out.println("1. Pesos colombianos");
