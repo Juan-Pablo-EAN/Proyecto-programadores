@@ -1,5 +1,10 @@
+package proyectoprogramadores;
+
+import java.util.Scanner;
 import java.text.DecimalFormat;
+
 public class ProyectoProgramadores {
+
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         DecimalFormat dec = new DecimalFormat("#.0");
@@ -48,11 +53,42 @@ public class ProyectoProgramadores {
                     break;
             }
 
+        } else if (eleccion == 2) {
+            System.out.println("Seleccione el tipo de sistema de operativo movil : ");
+
+            System.out.println("1. Android");
+            System.out.println("2. IOS");
+            System.out.println("3. Windows Phone");
+            System.out.println("4. Multisistema movil");
+
+            eleccion = entrada.nextInt();
+            switch (eleccion) {
+                case 1:
+                    precio = base + 1000000;
+                    tiempo = 4;
+                    tipo = "aplicación para el sistema operativo Android";
+                    break;
+                case 2:
+                    precio = base + 2000000;
+                    tiempo = 4;
+                    tipo = "aplicación para el sistema operativo IOS";
+                    break;
+                case 3:
+                    precio = base + 1000000;
+                    tiempo = 4;
+                    tipo = "aplicación para el sistema operativo Windows Phone";
+                    break;
+                case 4:
+                    precio = base + 2500000;
+                    tiempo = 4;
+                    tipo = "aplicación multisistema movil";
+                    break;
+            }
         } else if (eleccion == 3) { //inicio de la condicion de paginas web
             precio = base + 1000000 + 250000 + 42000;
             tiempo = 4;
             tipo = "pagina web";
-            
+
         } else if (eleccion == 4) { //inicio de la condicion de app multiplataforma
             precio = base + 5000000;
             tiempo = 6;
@@ -65,12 +101,12 @@ public class ProyectoProgramadores {
         eleccion = entrada.nextInt();
         if (eleccion == 1) {
             precio = precio;
-            moneda = "pesos";
+            moneda = "de pesos";
         } else if (eleccion == 2) {
-            precio = precio/3772; //conversion a dolares
+            precio = precio / 3772; //conversion a dolares
             moneda = "dolares";
         } else if (eleccion == 3) {
-            precio = precio/4428; //conversion a euros
+            precio = precio / 4428; //conversion a euros
             moneda = "euros";
         } else {
             System.out.println("Ingresaste un valor incorrecto");
